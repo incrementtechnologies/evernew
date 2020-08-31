@@ -1,30 +1,30 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
-Vue.use(VueRouter);
-
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
-];
-
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes
-});
-
-export default router;
+import Vue from 'vue'
+import Router from 'vue-router'
+import CONFIG from '../config'
+import AUTH from 'services/auth/index'
+import ModuleRoutes from './module_routes'
+import Helpers from './helpers'
+import Services from './services'
+import BootstrapVue from 'bootstrap-vue'
+global.Tether = require('tether')
+global.jQuery = require('jquery')
+global.$ = global.jQuery
+// require('bootstrap/dist/css/bootstrap.min.css')
+// require('bootstrap')
+// require('font-awesome/css/font-awesome.css')
+require('assets/style/bootstrap.min.css')
+require('assets/style/bootstrap-grid.min.css')
+require('assets/style/bootstrap-reboot.min.css')
+global.Popper = require('assets/js/min/popper.min.js').default
+require('assets/js/min/bootstrap.min.js')
+require('assets/style/theme.css')
+require('assets/style/select2.min.css')
+require('assets/js/min/select2.full.min.js')
+import '@fortawesome/fontawesome-free/css/all.css'
+AUTH.checkAuthentication()
+Vue.use(BootstrapVue)
+Vue.use(Router)
+export default new Router({
+  routes: ModuleRoutes.routes
+})
