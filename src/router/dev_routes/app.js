@@ -83,6 +83,13 @@ export default{
     meta: {
       tokenRequired: true
     }
+  }, {
+    path: '/HomeUser',
+    name: 'HomeUser',
+    component: resolve => require(['modules/HomeUser/HomeUser.vue'], resolve),
+    meta: {
+      tokenRequired: false
+    }
   }
   ]
 }
