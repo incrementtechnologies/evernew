@@ -33,13 +33,13 @@ export default {
     icon: 'fa fa-shopping-bag',
     route: '/orders'
   }],
-  APP_NAME: 'RunwayExpress',
-  APP_NAME_HTML: 'Runway Express',
-  APP_EMAIL: 'support@runwayexpress.com',
+  APP_NAME: 'EverNew',
+  APP_NAME_HTML: 'EverNew Appliance',
+  APP_EMAIL: 'support@evernew.com',
   COMPANY: 'RunwayExpress',
-  COMPANY_URL: 'https://runwayexpress.com',
-  APP_URL: 'https://runwayexpress.com',
-  COPYRIGHT: 'RunwayExpress ' + new Date().getFullYear(),
+  COMPANY_URL: 'https://evernew.com',
+  APP_URL: 'https://evernew.com',
+  COPYRIGHT: 'EverNew ' + new Date().getFullYear(),
   USER_TYPE: [{
     title: 'USER'
   }, {
