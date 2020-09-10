@@ -92,7 +92,7 @@ export default {
       localStorage.setItem('account_id', this.user.userID)
       localStorage.setItem('account/' + code, JSON.stringify(this.user))
       if(flag){
-        ROUTER.push(type === 'USER' ? '/welcome' : '/dashboard')
+        ROUTER.push(type === 'USER' ? '/search' : '/search')
       }
     }
     setTimeout(() => {

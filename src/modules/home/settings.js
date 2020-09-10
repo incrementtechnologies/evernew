@@ -1,11 +1,12 @@
+import Color from 'src/color.js'
 export default {
   page: [{
-    title: 'Runway Express',
-    subtitle: 'Delivering food to your home!',
+    title: 'Evernew',
+    subtitle: 'Home Appliances',
     description: 'This is a test here!',
     image: null,
     template: 'right',
-    background: '#ff5B04',
+    background: Color.primary,
     textColor: 'text-white'
   }]
 }

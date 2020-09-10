@@ -19,8 +19,8 @@
             <span>
               <i class="fa fa-cog"></i>
             </span>
-            <span class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="settings">
-              <!-- <span class="dropdown-item-profile">
+            <span class="dropdown-menu dropdown-menu-right" aria-labelledby="settings">
+              <span class="dropdown-item-profile">
                 <span class="account-picture text-center">
                   <span class="profile-photo-header">
                     <span class="profile-image-holder-header"  v-if="user.profile !== null">
@@ -30,7 +30,7 @@
                   </span>
                 </span>
                 <span class="account-info text-center">{{user.username}}</span>
-              </span> -->
+              </span>
               <span class="dropdown-item dropdown-item-menu-title">
                 <label>Personal</label>
               </span>
@@ -38,27 +38,26 @@
                 <i v-bind:class="item.icon"></i>
                 <label>{{item.title}}</label>
               </span>
-              <span class="dropdown-item dropdown-item-menu-title">
+<!--               <span class="dropdown-item dropdown-item-menu-title">
                 <label>Documents</label>
-              </span>
+              </span> -->
               <!--GUIDE-->
-              <span class="dropdown-item" @click="openModal('#guideModal')">
+<!--               <span class="dropdown-item" @click="openModal('#guideModal')">
                 <i class="far fa-question-circle"></i>
                 <label>Guide</label>
-              </span>
+              </span> -->
               <!--PRIVACY POLICY-->
-              <span class="dropdown-item" @click="openModal('#privacyModal')">
+<!--               <span class="dropdown-item" @click="openModal('#privacyModal')">
                 <i class="fas fa-shield-alt"></i>
                 <label>Privacy Policy</label>
-              </span>            
+              </span>      -->       
               <!--TERMS AND CONDITIONS-->
-              <span class="dropdown-item" @click="openModal('#termsAndConditionsModal')">
-                <i class="far fa-handshake"></i>
+<!--               <span class="dropdown-item" @click="openModal('#termsAndConditionsModal')">
+                <i class="fa fa-handshake-o"></i>
                 <label>Terms and Conditions</label>
               </span>
-              <span class="dropdown-divider"></span>
-              <span class="dropdown-item text-danger" v-on:click="logOut()">
-                <i class="fas fa-sign-out-alt text-danger"></i>
+ -->              <span class="dropdown-item" v-on:click="logOut()">
+                <i class="fas fa-sign-out-alt"></i>
                   <label>Logout</label>
                 </span>
             </span>
@@ -254,17 +253,7 @@ body{
     background: $primary;
   }
 
-  .shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-  }
 
-  .shadow {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-  }
-
-  .shadow-lg {
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-  }
 /*---------------------------------------------
        
 
@@ -331,7 +320,7 @@ body{
 }
 
 .dropdown-menu{
-  // width: 250px;
+  width: 250px;
   min-height: 250px;
   border-radius: 0px !important;
   padding-bottom: 0px !important;
@@ -351,7 +340,6 @@ body{
   background: #fff !important;
   padding-top: 0px !important;
 }
-
 .dropdown-item:hover{
   background: #ddd !important;
 }
@@ -361,11 +349,6 @@ body{
   padding-right: 10px !important;
   color: $primary !important;
 }
-
-.dropdown-item i.text-danger {
-  color: #dc3545!important
-}
-
 .dropdown-item label{
   font-size: 14px !important;
 }
@@ -806,16 +789,14 @@ export default {
           wsHost: CONFIG.PUSHER.wsHost,
           wsPort: CONFIG.PUSHER.wsPort,
           disableStats: true,
-          enabledTransports: ['ws', 'wss'],
-          encrypted: true
+          enabledTransports: ['ws', 'wss']
         })
       }
       window.Echo.channel(COMMON.pusher.channel)
-      .listen('Call', e => {
+      .listen('call', e => {
         console.log(e)
       })
       .listen(COMMON.pusher.notifications, e => {
-        console.log(e)
         AUTH.addNotification(e.data)
       })
       .listen(COMMON.pusher.messages, e => {

@@ -1,7 +1,5 @@
 <template>
 <div class="container-fluid">
-  
-  <h3>EverNew Appliance, this is Kent. How may I help you?</h3>
     <div class="search-form">
     <b-form inline>
     <label class="sr-only" for="inline-form-input-zipcode">What is your zipcode</label>
@@ -12,9 +10,9 @@
       placeholder="What is your zip code?"
     ></b-input>
 
-    <b-button class="button" variant="primary" type="button" data-toggle="modal" data-target="#error"> <i class="fas fa-search"></i></b-button>
-    </div>
-  </b-form>
+      <b-button class="button" variant="primary" type="button" data-toggle="modal" data-target="#error"> <i class="fas fa-search"></i></b-button>
+      </div>
+    </b-form>
              
      </div>
     

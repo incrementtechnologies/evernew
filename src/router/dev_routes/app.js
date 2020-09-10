@@ -84,9 +84,9 @@ export default{
       tokenRequired: true
     }
   }, {
-    path: '/HomeUser',
-    name: 'HomeUser',
-    component: resolve => require(['modules/HomeUser/HomeUser.vue'], resolve),
+    path: '/search',
+    name: 'search',
+    component: resolve => require(['modules/search/Search.vue'], resolve),
     meta: {
       tokenRequired: false
     }
@@ -94,6 +94,37 @@ export default{
     path: '/profile/:parameter?',
     name: 'profile',
     component: resolve => require(['components/increment/settings/UpdateBasic.vue'], resolve),
+    meta: {
+      tokenRequired: true
+    }
+  }, {
+    path: '/products',
+    name: 'products',
+    component: resolve => require(['components/increment/imarketvue/product/Products.vue'], resolve),
+    meta: {
+      tokenRequired: true
+    }
+  },
+  {
+    path: '/product/edit/:code',
+    name: 'product',
+    component: resolve => require(['components/increment/imarketvue/product/EditProduct.vue'], resolve),
+    meta: {
+      tokenRequired: true
+    }
+  },
+  {
+    path: '/marketplace',
+    name: 'marketplace',
+    component: resolve => require(['components/increment/imarketvue/marketplace/Marketplace.vue'], resolve),
+    meta: {
+      tokenRequired: true
+    }
+  },
+  {
+    path: '/marketplace/product/:code/:status?',
+    name: 'marketplaceProduct',
+    component: resolve => require(['components/increment/imarketvue/marketplace/Product.vue'], resolve),
     meta: {
       tokenRequired: true
     }
