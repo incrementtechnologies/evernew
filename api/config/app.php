@@ -170,6 +170,8 @@ return [
          */
 
         Increment\Account\AccountServiceProvider::class,
+        Increment\Imarket\Merchant\MerchantServiceProvider::class,
+        Increment\Imarket\Product\ProductServiceProvider::class,
         
         /*
          * Application Service Providers...

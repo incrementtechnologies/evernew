@@ -124,7 +124,7 @@ export default {
     productTitleLimit: 100,
     variations: ['Size', 'Color']
   },
-  broadcastingFlag: true,
+  broadcastingFlag: false,
   passwordLimit: 8,
   alertFlag: false
 }
