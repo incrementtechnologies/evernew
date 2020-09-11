@@ -40,7 +40,8 @@
             "App\\": "app/",
             "Increment\\Account\\": "packages/increment/account/src/",
             "Increment\\Imarket\\Merchant\\": "packages/increment/imarket/merchant/src/",
-            "Increment\\Imarket\\Product\\": "packages/increment/imarket/product/src/"
+            "Increment\\Imarket\\Product\\": "packages/increment/imarket/product/src/",
+            "Increment\\Imarket\\Location\\": "packages/increment/imarket/location/src/"
         }
     },
     "autoload-dev": {
