@@ -172,6 +172,7 @@ return [
         Increment\Account\AccountServiceProvider::class,
         Increment\Imarket\Merchant\MerchantServiceProvider::class,
         Increment\Imarket\Product\ProductServiceProvider::class,
+        Increment\Imarket\Location\LocationServiceProvider::class,
         
         /*
          * Application Service Providers...
